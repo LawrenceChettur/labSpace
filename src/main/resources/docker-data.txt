@@ -1,0 +1,19 @@
+docker run -d \
+    --name law-postgres \
+    -e POSTGRES_USER=root \
+    -e POSTGRES_PASSWORD=root \
+    -e POSTGRES_DB=law-test-db \
+    -p 5432:5432 \
+    -e PGDATA=/var/lib/postgresql/data/pgdata \
+    -v /Users/lawrence/docker/law-postgres:/var/lib/postgresql/data \
+    postgres
+
+
+
+docker run -d \
+    --name law-pgadmin4 \
+    -e PGADMIN_DEFAULT_EMAIL=lawrence.chettur@gmail.com \
+    -e PGADMIN_DEFAULT_USER=root \
+    -e PGADMIN_DEFAULT_PASSWORD=root \
+    -p 5050:80 \
+    dpage/pgadmin4

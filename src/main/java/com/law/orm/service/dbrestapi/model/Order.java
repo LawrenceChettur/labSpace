@@ -7,23 +7,22 @@ import javax.persistence.*;
 public class Order {
 
     @Id
-    @Column(name="id")
+    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private long id;
 
-    @Column(name="code")
+    @Column(name = "code")
     private String code;
     private String name;
     private String description;
     private String price;
 
 
-
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
